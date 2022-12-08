@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
+    <title>Expense Chart</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="texts">
+                <h3>My balance</h3>
+                <h1>$921.48</h1>
+            </div>
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+        </div>
+        <div class="container">
+            <h1>Spending - Last 7 days</h1>
+            <canvas id="myChart" style="width:100%;max-width:450px"></canvas>
+            <hr>
+            <div class="Info">
+                <div class="left">
+                    <h3>Total this month</h3>
+                    <h1>$478.33</h1>
+                </div>
+                <div class="right">
+                    <h2>+2.4%</h2>
+                    <h3>from last month</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

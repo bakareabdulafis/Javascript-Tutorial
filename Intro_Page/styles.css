@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Epilogue&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    font-family:'Epilogue';
+    overflow: hidden;
+}
+.navigation nav{
+    display: flex;
+    width: 95vw;
+    margin: 30px auto;
+    font-size: medium;
+    color: hsl(0, 0%, 41%);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+a:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+.navlinks{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+    width: 40vw;
+}
+.logo{
+    width: 6%;
+    height: 6%;
+}
+.identity{
+    position: absolute;
+    right: 5vw;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-around;
+}
+.login{
+    margin-right: 2vw;
+}
+.register{
+    margin-top: -10px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.register:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.register:hover a{
+    color: white !important;
+}
+.features,.company{
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+.featuresdrop,.companydrop{
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.featuresdrop ul,.companydrop ul{
+    padding-inline-start: 0px;
+}
+.featuresdrop ul li,.companydrop ul li{
+    margin-bottom: 10px;
+}
+.featuresdrop ul li:last-child, .companydrop ul li:last-child{
+    margin-bottom: 0px;
+}
+.todo,.calendar,.reminders,.planning{
+    margin-right: 15px;
+}
+.hero{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 70vw;
+    column-gap: 5vw;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.herodesktop{
+    width: 30vw;
+    height: 40vw;
+}
+.heromobile{
+    display: none;
+}
+.left{
+    width:35vw;
+}
+.clients ul{
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    margin-top: 80px;
+}
+.hide{
+    display: none;
+}
+.texts h1{
+    font-size: 5vw;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.texts p{
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+.learn{
+    background: none;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.learn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+.up{
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+.featuresnav:hover .up, .companynav:hover .up{
+    transform: rotate(180deg);
+}
+.features:hover .featuresdrop,.company:hover .companydrop{
+    display: block;
+}
+.hamburger{
+    position: absolute;
+    right: 0vw;
+    display: none;
+}
+.hamburger:hover{
+    cursor: pointer;
+}
+.hamburger span{
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+.hamburger:last-child{
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 375px){
+    body{
+        width: 100vw;
+        min-height: 960px;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 2vw;
+        z-index: 2;
+    }
+    .logo{
+        width: 20%;
+        height: 20%;
+    }
+    .navigation nav{
+        width: 95vw;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95vw;
+        margin: auto;
+    }
+    .herodesktop{
+        display: none;
+    }
+    .heromobile{
+        display: block;
+        width: 95vw;
+    }
+    .clients{
+        width: 95vw;
+        margin: auto;
+    }
+    .left{
+        margin-top: -30px;
+        width: 95vw;
+        text-align: center;
+    }
+    .texts h1{
+        font-size: 10vw;
+    }
+    .texts p{
+        font-size: 5vw;
+        line-height: 25px;
+    }
+    .learn{
+        background-color: black;
+        color: white;
+        margin-bottom: -40px;
+    }
+    .learn:hover{
+        background-color: none;
+    }
+    .clients img{
+        width: 80%;
+    }
+    .one,.three{
+        transform: rotate(0deg) translateY(0vw);
+    }
+    .hamburger.open .one{
+        transform: rotate(45deg) translateY(1.2vw);
+        transition: transform 0.3s;
+    }
+    .hamburger.open .three{
+        transform: rotate(-45deg) translateY(-1.2vw);
+        transition: transform 0.3s;
+    }
+    .hamburger.open .two{
+        display: none;
+    }
+    .background{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.35);
+        margin-top: -30px;
+        position: absolute;
+        left: 0;
+        display: none;
+        z-index: 1;
+    }
+    .background.show{
+        display: block;
+        transition: right ease-in-out 0.3s;
+    }
+    .navlinks{
+        position: absolute;
+        left: 100vw;
+        width: 50vw;
+        height: 100vh;
+        padding: 50px;
+        padding-left: 30px;
+        padding-top: 70px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        font-weight: bold;
+        margin-top: -30px;
+        white-space: nowrap;
+        display: none;
+        z-index: 1;
+    }
+    .navlinks.show{
+        display: block;
+        left: 50vw;
+        transition: left ease-in-out 0.3s;
+    }
+    .navlinks li{
+        margin-bottom: 40px;
+    }
+    .identity{
+        position: absolute;
+        width: 70vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        left: 80vw;
+        bottom: 30vh;
+        z-index: 1;
+        display: none;
+        font-weight: bold;
+    }
+    .identity.show{
+        display: flex;
+        left: 35vw;
+        transition: left ease-in-out 0.3s;
+    }
+    .featuresdrop,.companydrop{
+        background-color: white;
+        box-shadow: none;
+    }
+}
